@@ -1,0 +1,23 @@
+{
+  "name": "scalable-e-commerce-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Scalable e-commerce platform built with Node.js and TypeScript",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "check": "npm run typecheck && npm run lint",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0"
+  }
+}
