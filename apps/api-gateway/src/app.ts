@@ -1,10 +1,20 @@
 import Fastify from 'fastify';
+import logger from '@ecommerce/logger';
+import { config } from '@ecommerce/config';
 import healthRoute from './routes/health.js';
 
 const app = Fastify({
-  logger: true,
+  logger,
 });
 
 app.register(healthRoute);
+
+app.log.info(
+  {
+    environment: config.nodeEnv,
+    port: config.port,
+  },
+  'API Gateway initialized',
+);
 
 export default app;
