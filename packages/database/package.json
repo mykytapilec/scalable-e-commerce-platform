@@ -8,13 +8,17 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "check": "tsx src/check.ts"
+    "check": "tsx src/check.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.3",
     "pg": "^8.13.0"
   },
   "devDependencies": {
     "@types/pg": "^8.11.10",
+    "prisma": "^6.19.3",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   }
