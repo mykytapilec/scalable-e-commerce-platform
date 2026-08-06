@@ -1,11 +1,15 @@
-import app from './app.js';
-import { config } from '@ecommerce/config';
+import app from "./app.js";
+import { initializeDatabase } from "./database.js";
 
-const start = async () => {
+const port = 3003;
+
+const start = async (): Promise<void> => {
+  await initializeDatabase();
+
   try {
     await app.listen({
-      port: config.port + 3,
-      host: '0.0.0.0',
+      port,
+      host: "0.0.0.0",
     });
   } catch (error) {
     app.log.error(error);
