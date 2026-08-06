@@ -2,5 +2,20 @@
   "name": "@ecommerce/notification-service",
   "version": "1.0.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ecommerce/config": "1.0.0",
+    "@ecommerce/logger": "1.0.0",
+    "@ecommerce/types": "1.0.0",
+    "fastify": "^5.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
 }
