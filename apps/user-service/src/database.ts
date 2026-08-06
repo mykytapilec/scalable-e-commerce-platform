@@ -1,5 +1,5 @@
-import { checkDatabaseConnection } from "@ecommerce/database";
+import { prisma } from "@ecommerce/database";
 
 export async function initializeDatabase(): Promise<void> {
-  await checkDatabaseConnection();
+  await prisma.$connect();
 }
