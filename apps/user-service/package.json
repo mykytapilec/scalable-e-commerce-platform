@@ -9,9 +9,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ecommerce/config": "1.0.0",
-    "@ecommerce/logger": "1.0.0",
-    "@ecommerce/types": "1.0.0",
+    "@ecommerce/database": "workspace:*",
+    "@ecommerce/logger": "workspace:*",
+    "@ecommerce/config": "workspace:*",
     "fastify": "^5.0.0"
   },
   "devDependencies": {
