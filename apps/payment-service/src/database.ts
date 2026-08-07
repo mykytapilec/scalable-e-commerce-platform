@@ -1,5 +1,7 @@
-import { checkDatabaseConnection } from "@ecommerce/database";
+import { prisma } from "@ecommerce/database";
 
 export const database = async (): Promise<boolean> => {
-  return checkDatabaseConnection();
+  await prisma.$connect();
+
+  return true;
 };
